@@ -49,11 +49,14 @@ button {
 
 /* Howdid-Container */
 .img-container {
+    display: grid;
+    place-items: center;
     background-color: var(--MediumGrey);
     width: var(--circleSize);
     height: var(--circleSize);
     padding: .5em;
     border-radius: 50%;
+    
 }
 
 .button-row-container {
