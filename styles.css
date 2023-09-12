@@ -1,0 +1,54 @@
+/* Universal */
+
+:root {
+/* Primary */
+--Orange: hsl(25, 97%, 53%);
+
+/* Neutral */
+--White: hsl(0, 0%, 100%);
+--LightGrey: hsl(217, 12%, 63%);
+--MediumGrey: hsl(216, 12%, 54%);
+--DarkBlue: hsl(213, 19%, 18%);
+--VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+body {
+    background-color: var(--VeryDarkBlue);
+    color: var(--White);
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+}
+
+section {
+    background-color: var(--DarkBlue);
+}
+
+p {
+    color:var(--LightGrey)
+}
+
+/* Howdid-Container */
+.img-container {
+    background-color: var(--MediumGrey);
+}
+.button-row-container button {
+    background-color: var(--MediumGrey);
+    color: var(--LightGrey)
+}
+
+button[type='submit'] {
+    background-color: var(--Orange);
+    color: var(--White)
+}
+
+/* Thankyou-Container */
+.thankyou-container .selection-result {
+    color: var(--Orange);
+}
+
+
+
+
+/* Footer */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
