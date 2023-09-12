@@ -1,4 +1,7 @@
 /* Universal */
+* {
+    box-sizing: border-box;
+}
 
 :root {
 /* Primary */
@@ -10,6 +13,8 @@
 --MediumGrey: hsl(216, 12%, 54%);
 --DarkBlue: hsl(213, 19%, 18%);
 --VeryDarkBlue: hsl(216, 12%, 8%);
+
+--circleSize: 2.25rem;
 }
 
 body {
@@ -17,6 +22,9 @@ body {
     color: var(--White);
     font-size: 15px;
     font-family: 'Overpass', sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100vh;
 }
 
 section {
@@ -24,31 +32,107 @@ section {
 }
 
 p {
-    color:var(--LightGrey)
+    color:var(--LightGrey);
+    line-height: 1.35;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Utility */
+.content {
+    margin: 2em;
+    padding: 1.5em;
+    border-radius: 15px;
 }
 
 /* Howdid-Container */
 .img-container {
     background-color: var(--MediumGrey);
+    width: var(--circleSize);
+    height: var(--circleSize);
+    padding: .5em;
+    border-radius: 50%;
 }
+
+.button-row-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 .button-row-container button {
     background-color: var(--MediumGrey);
-    color: var(--LightGrey)
+    color: var(--LightGrey);
+    width: var(--circleSize);
+    height: var(--circleSize);
+    padding: .5em;
+    border-radius: 50%;
+    border: none;
+    font-weight: 700;
 }
+
+
+.button-row-container button:focus {
+    background-color: var(--LightGrey);
+    color: var(--White);
+}
+
+.button-row-container button:hover {
+    background-color: var(--Orange);
+    color:var(--White);
+}
+
 
 button[type='submit'] {
     background-color: var(--Orange);
-    color: var(--White)
+    color: var(--White);
+    width: 100%;
+    margin-top: 1.5em;
+    padding: .5em;
+    border: none;
+    border-radius: 15px;
+    font-weight: 700;
 }
 
+button[type='submit']:hover {
+    background-color: var(--White);
+    color:var(--Orange);
+}
+
+button[type='submit']:active {
+    transform: translateY(5%);
+}
+
+
 /* Thankyou-Container */
+.thankyou-container {
+    text-align: center;
+}
+
 .thankyou-container .selection-result {
     color: var(--Orange);
+    background-color: var(--MediumGrey);
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    padding: .5em;
+    border-radius: 15px;
 }
 
 
 
 
 /* Footer */
+footer {
+    position: absolute;
+    bottom: 1%;
+}
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width: 850px) {
+    section {
+        max-width: 25%;
+    }
+}
